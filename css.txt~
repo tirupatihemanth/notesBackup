@@ -1,0 +1,143 @@
+Css defines the way we want to display our html files
+<stlyle type="text/css"></style> if you write in html file css goes inside css
+to select a html element with css we use
+body{code goes here.......}  a body tag selector
+background-color: #ffffff;
+margin-left:20%;
+margin-right:20%;
+border:1px dotted @fffffff; a border for element specified
+padding:1px;space inside the border
+inner elemetns when given different styling options will override the things of the outer elemets or the elements in which this tag is
+color:#000000; this is we can set color for elements
+if we add padding to the paragraph it will be done for the space specified by the paragraph tag
+css is also a markup language used to seperate the formatting of the html files from the basic structure and the architechture of the html file
+we format of html using using SELECTORS,PROPERTIES AND VALUES
+h1{color:#ffffff;} here {} is decleration block h1 tagis selector color is property and its value is given
+font-size:12px;
+font-weight:normal;or give px for weight;
+
+To define a class in css style sheet:
+to selectively apply styles we use classess
+.className{
+	write property and value pairs here
+	color:#ffffff;
+	
+}
+<span class ="className"></span> to selectively apply css styles to page content without modyfing page layout. You don't have to always span we can use others also like <em></em>
+ 
+multiple selectors can be used by using a ,comma seperator   h1,h2{property and values}
+
+adding Pseudo classes
+links has following states associated with them
+visited,unvisited,hover,active
+using pseudo classes we can change or make above actions happen
+
+selector:pseudoClass{
+	property:value;
+}
+selector is some tag pseudoClass available for anchor tag is link
+a:link{properties just before anything to happen}
+a:visited{properties just after visited}
+a:hover{properties while hovering}
+a:active{properties while clicking}
+
+The css box model
+
+this used to structure the content on the box model
+
+just think an element as enclosed by a box
+
+to expand the space between content and box this is called padding
+we can make a border at that box borders space b/w content and border is padding
+beyond that border we can define some space that is called a margin
+
+we can apply class to particular tags of an element using
+ul.squarBulletPoint{
+	list-style-type:square;
+}
+for ordered list list-style-type:upper-roman;
+
+we use div tags and id's to control layout of our structure
+
+position:absolute;//relative to the browser window we have to specify property
+we have four properties i.e left right top bottom
+left:460px; distance from the left;
+top:68px; distance from the top;
+
+In relative position we are going to make changes w.r.to current position
+relative positioning:
+position:relative;
+style = "position:relative;left:20px;"that part will move by 20px withoutdisturbing any other parts
+
+to fill in other elemets over floating objects we use floating objects
+instead of using position:absolute relative and other we use float
+float:right; always stays to right even on moving
+on resizing also if we want to change width of different elements
+set using just margin so that it's width can varying in 
+
+
+clear:right;this makes anyfloats on the required elemets;
+
+overflow:scroll;
+this makes anything more can scroll
+height:400px;
+margin-left:auto;
+margin-left:auto;
+makes the element centre
+all the above are used for layout using id's and div's
+fixed positioning;
+position:fixed;
+top:200px;
+left:0px;
+i.e it doesn't scroll with the page
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

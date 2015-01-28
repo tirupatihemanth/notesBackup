@@ -1,0 +1,27 @@
+1. Arrays are constant pointers i.e always the array variable points to the first element of the contiguous memory location like if a is an array variable(int a[5])then you cannot assign it to some other location i.e a=&b or a=a+1 i.e you cannot change the location to which the pointer variable is pointing. You can compare two pointers i.e p<q or p=q or p>q depending on the locations of the elements(It is important that both p and q must be of the same type).
+2. String hello has 6 characters as you must never forget to include \0 the null character String is an array of characters once the \0 comes that is the end of the string but the array may continue until the reserved memory allocated during the declaration of array
+3. scanf("%d%d%d",blah); can take values separated by spaces or the values given separated by a carriage return.  If you use %d,%d,%d in scanf then you have to can pass values separated by commas
+4. strrev(arr); this function in string.h reverses the string part(before the \0 character) and assigns to arr itself
+5. char **i; is the definition for pointer to a pointer. CONST INT i=3; the value of i if changed at any part of the program it throws an exception.
+6. int *ip=NULL; NULL is in stdio.h ip is a null pointer i.e it doesnot point to anything.  void *ip here ip is a void pointer it can point to any thing like the value of any data type. %p is the preferred format specifier to print address of any data type
+7.In prime Number optimisation check other than 2 and 3 other odd numbers which are less than or equal to half of the required number.
+8. char a[5] = "blah";	char *ptr =a; here we can assign like *(ptr+1)='m'; this is true but char *ip = "hello"; here *(ip+1)='m'; is an error as hello memory is not allocated by you it is saved in read only memory and if you try to change it throws an exception. Here ip is a pointer to a constant string and a is a constant pointer to a string.
+9. Got to know that matrix[i][j] can be simply written as matrix[i,j]
+
+The Array version:
+
+char a[] = "string";  
+Creates an array that is large enough to hold the string literal "string", including its NULL terminator. The array string is initialized with the string literal "string". The array can be modified at a later time. Also, the array's size is known even at compile time, so sizeof operator can be used to determine its size.
+
+The pointer version:
+
+char *p  = "string"; 
+Creates a pointer to point to a string literal "string". This is faster than the array version, but string pointed by the pointer should not be changed, because it is located in a read only implementation-defined memory. Modifying such an string literal results in Undefined Behavior.
+     +---+---+---+---+---+---+----+
+  a: | s | t | r | i | n | g | \0 |
+     +---+---+---+---+---+---+----+
+     +-----+     +---+---+---+---+---+---+---+ 
+  p: |  *======> | s | t | r | i | n | g |\0 |    
+     +-----+     +---+---+---+---+---+---+---+ 
+sprintf is used to add a string with some other thing
+sprintf(dest,srcstring,adder);

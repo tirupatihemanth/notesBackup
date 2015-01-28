@@ -1,0 +1,4 @@
+nslookup,dig,whois are used to get info about the hostnames from ip addresses on the network and much more These are name resolution tools
+/etc/hosts gives the no. of hosts on the present system
+/etc/resolv.conf
+dig domainName will give information about the domain name

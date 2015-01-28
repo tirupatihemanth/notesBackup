@@ -1,0 +1,4 @@
+1.Activities 2.Services 3. Broadcast receivers 4. Content Providers
+Activity Primary class for user interaction
+Services donot have any user interface
+
