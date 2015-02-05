@@ -1,0 +1,7 @@
+we can't inherit multiple classes but we can implement multiple interfaces
+We can declare Interface variables but we can't instantiate an Interface
+Can use only final(or constant) variables in a class
+If you are not going to implement all the methods declared in Interface which subclass implemented it has to be an abstract class
+All methods in abstract classes are by default public and all variables are public static final (static because anyways you don't have any instantiation)
+Interface doen't declare constructors
+

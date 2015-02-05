@@ -1,0 +1,25 @@
+Dec 21, 2014:
+GCD: Eucledian Algorithm
+    The gcd of two numbers doesn't change if the larger number is replaced by the diff between two numbers
+    Thus the larger number can be replaced with the reminder obtained when the smaller divides the larger number ( direct application of algo )
+"-c" option for gcc compiles without linking to the libraries
+strtok( char *str, chr * delim) modifies the contents of the string based on delimiter used to split string
+
+Sorting can also be done by building a tree and then printing the inorder traversal of the tree ( memory complexity and time complexity[findout])
+
+Tree Traversals ( Results are written by keeping binary search trees in mind ):
+    1.Clearly for a given Inorder tree is not unique as for a given inorder we can construct many trees because after all inorder just gives a sorted array of all elements in the tree. It communicates the presence of all elements in the tree in sorted order
+    2. for a given pre order traversal or post order traversal tree is unique and can be reconstructed
+    3. Getting inorder is very simple just sort the elements of any other order to get the inorder traversal of a binary search tree
+    
+If given any other two orders other than inorder for a BINARY TREE the tree cannot be uniquely constructed the negation of this statement is disproved by counter example (example given in the pdf in lab9 cs2110)
+
+testing a sequence of characters to determine if it is a palindrome (i.e., reads the same forward and backward, like "radar") can be accomplished easily with one stack and one queue. The solution is to enter the sequence of characters into both data structures, then remove letters from each data structure one at a time and compare them, making sure that the letters match.
+###
+Prime factors Algo
+Sieve of Atkin - An Improvisation of Sieve of Eratosthenis
+###
+The idea of counting all possible combination of n numbers by using numbers from 1 to 2^n
+understand the concept of faster I/O using getchar_unlockee() function which returns the next character in the input stream
+qsort function implements quick sort algorithm and the syntax is qsort(base address, no. of items, size of each item, comparefunction); compare function takes two parameters which are both void parameters and used for comparison if return value of compare function is > 0 then first argument is greater than b i.e you get an ascending order of the elements
+

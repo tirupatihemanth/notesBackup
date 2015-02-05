@@ -1,0 +1,152 @@
+//difference between a scripting language and interpreted language
+php is a server side scripting language
+scripting language does things only inresponse to events where as programming language does even when there are no events
+php doesn't need to be compiled like programming languages like c, java
+php is designed for use with html
+javascript is client side scripting language
+phpinfo(); this function gives the details about the webserver and php you are using
+strtolower($aString);
+strtoupper($aString);
+ucwords($aString);//here first letter of every word is made capital	 
+ucfirst($aString);//makes first letter of entire sentence capital
+str_repeat($aString,2);//repeats the string
+substr($thirsString,5,10);//returns the substring in between the indicies 5 and 10
+strpos($thirdString,"brown");find the position of the brown in aString
+strchr($aString,"z");finds the position of the character z in aString
+strlen($thirdString);//gives the length of the string
+trim($aString); removes the spaces at the beginning of the string
+str_replace("string1","string2",$aString);replaces the string1 in aString to string2
+strstr($aString,"newString");finds the newString in aString and returns rest of the string from the newString if it finds
+
+php stands for hyper text preprocessor
+php is serverside scripting language
+It is not interpreted by browser but it is interpreted by the webserver
+html is markup language
+$is used to get value for a php variable
+$var = array(1,2,3,4);
+print_r($var);
+or echo var;
+echo cannot print arrays in readable format use print_r(arrayName); for printing it rest all are same features for both functions
+$a= array_shift($var);
+now this removes first element from the var and returns it to a
+$b= array_ushift($var,"first");
+now first will be injected at the beginning of the array var and returns the length of the array after addition to b variable you can catch the count i.e b only if you want to
+$a = array_pop($numbers);
+  here the last element in the array numbers will be removed and assigned to a
+$push= array_push($numbers,"last");
+here the "last" is added to the end of the numbers array
+pop and push at the end;
+shift and unshift at the beginning;
+Epoch time/Unix timestamp
+time() // returns current time since 1970 this is called unix time stamp
+mktime($hr,$min,$sec,$mo,$day,$yr);//converts to number of seconds since 1970 i.e returns unix timestamp
+strtotime($any_string) // tries to convert to timestamp based on features in the string
+strtostring("now");it returns present timestamp
+strtostring("last monday");it works
+strtostring("15th september,2005);it works
+strtostring("+day");it gives tomorrows timestamp
+checkdate(month,day,year); whether date exists or not returns boolean
+Now let us format Timestamp
+check out the $format in the documentation
+date($format,$timestamp)
+strftime($format,$timestamp)
+echo strftime("the date today is "%m/%d/%y",$timestamp);
+str_replace('stringOrChar','newString',$string);
+<hr /> creates a new line
+ceil($float);
+floor($float);
+round($float);
+rand(min,max);random between min and max
+rand();some random number
+fmod(20,7);gives the remainder when 20 is divided by 7
+abs(-300);returns 300
+sqrt();
+here we can create array similar to dictionaries
+$array=array("first_name"=>"kevin","last_name"=>"skoglund");
+now you can just print out $array3["first_name"] returns kevin
+pow(a,2);a power 2
+array functions
+max($array);
+min($array);
+sort($array1);//returns an ascending order sorted arrays
+rsort($array1);//returns an descending order sorted array
+$string=implode("*",$array);//inserts "*"between all the elements of the string and makes it into a string
+$array=explode(" ",$someString);breaks the string into parts seperated by spaces
+SERVER AND REQUEST VARIABLES
+THRY ARE LIKE DICTIONARIES IN PYTHON  WHEN PASSED THE CORRESPONDING KEY YOU GET VALUE
+echo $bool will print 1 if boolean is true or doesn't print anything if boolean isfalse
+$var1=3;
+isset($var1); returns a boolean if on echoed gives 1 or nothing
+if $var2 isn't assigned anything then
+isset($var2); will return nothing
+unset($var1); now it will unset var1
+empty($var1); returns 1 if the var is unset nothing if the var is set
+gettype($var1); returns the type of the variable
+settype($var2,"string");we can set it into integer
+you can also type cast using $var3=(int)($var1) 
+is_array($var);
+is_bool($var);
+is_float($var);
+is_int($var);
+is_null($var1);
+is_numeric($var1);
+is_string(var1);
+
+define("MAX_WIDTH",500);
+these constants MAX_WIDTH cannot be changed points out an error if you change that value
+foreach($array as $value)
+	echo $value;
+now prints out each value from the array
+$var = array(4,5,14,35,35);
+current($var);returns 4
+next($var); returns 5
+reset($var); returns 4 again
+next moves the pointer to the end
+function name($arguments) {
+//statements here
+}
+
+for default argument values($color="red",$room="blue")
+
+cookie is a value stored in the clients web browser
+
+GET
+
+POST
+
+COOKIE
+
+THESE ARE THREE VALUES THROUGH WHICH USER CAN GIVE INPUTS
+<a href="secondpage.php?id=1">An url</a>
+if you would like to send more then seperate by &
+What php does is everything that was sent in the url string after question mark into a superglobal AN ARRAY i.e print_r($_GET); prints all in that array like dictionary
+if you have something that interference with urls like ? & " etc then we use encoding
+then use as below
+<a href= "second.php?name=<?php echo urlencode("kevin&")
+
+
+it converts to %20 %240 etc those are php's encoding
+
+
+
+
+
+
+
+
+
+
+
+$_GET
+$_POST
+$_COOKIE
+$_SESSION
+$_SERVER
+
+
+
+
+
+
+
+

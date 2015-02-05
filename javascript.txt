@@ -1,0 +1,237 @@
+where do you put java script is important
+where ever browser finds it it runs it there itself
+<script src="myscript.js" type="text/javascript"></script> after running all the html thing in the body
+just put this script tag over there this is a good practice i.e just before the closing body tag
+style sheets are to be put in the top
+
+
+var variableName;
+if(){}   //conditional syntax
+
+=== strict equality check i.e same equality and type
+x=5;  and x="5"; are same for double equal and for === they are difficult
+== equality 
+just it's good to create functions before calling the functions
+
+create functions
+ function functionName (any arguments){
+  
+ }
+ 
+ we Have to call the functions necessary
+ functionName(any Arguments here);
+ you don't have to write  anywhere the return type or anything
+ 
+ var anArray=[];
+var multipllValues =  new Array();//you can give size as argument else just get a dynameic array
+is another way;
+ anArray[0]=1; ect.,
+ you can put in anytype of data
+ nameArray.length();
+ var revArray =nameArray.reverse();
+ .join();prints joined values by commas
+ we can use .sort();
+ var myArrayOfLinks = document.getElementByTagName("a"); // here we get an array
+ `var today = new Date(); //current date and time
+ today.getMonth();//returns 0 to 11 today.getFullYear();//today.getDate();//gives 1-31 day of month today.getDay();//gives 0 to 6 for day i.e sun to sat
+ var y2k = new Date(year,month,date,hours,minutes,seconds);//variable number of parametres
+ similar to getMethods we can use setMonth setDay setfullYear();
+ if(object1.equals(object)); getTime gives time in milliseconds since 1970
+ 
+ toCreate object easily
+ var objec1 ={name:"hello",score:"hello"}; //is sufficient
+ object1.name gives them out
+ 
+ 
+DOM - document object model
+document is our html code
+object is something on the document that makes some sense
+element node text node(is where text is written)
+ 
+classes and id's can be attributed to any elements but a group of elements can have a single class but id is unique for a particular element
+var myElement = document.getElementById("someId");
+var myLinks = document.getElementsByTagName("a");
+now in myelement if we select tags we have
+var myFristList=myElement.getElementsByTagName("a");
+var limitedList = myFirstList.getElemensBytagName("li");
+myElement.getAttribute("align");
+myElement.setAttribute("align","left");
+
+myElement.innerHTML gives all innerHTML if it has some inner elements even those will be printed out
+var myNewElement = document.createElement("li");
+myElement.appendChild(myNewElement);
+myNewElement.innerHTML = "this text in the list item";
+var secondItem = myelement.getelementsByTagName("li")[1];
+  myElement.insertBefore(myNewElement(myNewElement,secondItem);//to insert at second place
+ Events already described 
+onload
+onclick
+onmouseover
+onblur
+onfocus
+Handling the events
+window.onload
+myelement.onclick = function() {
+  //code goes here
+};
+ //these are the anonymous function i.e no need to name
+ document.addEventListener('click',myFunction,false);
+ document.removeEventListener('click',myFucntion,false);
+ document.addEventLisstener('click',anotherFunction,false);//we can add any number of functions like this for a particular element
+ fuction prepareEventHandlers(){
+ all event handlers here
+ }
+ window.onload = function(){
+ prepareEventHandlers();
+ }
+ 
+ onfocus event when we clicked a part of the form
+ onblur when we leave we have onblur event going on
+ myElement.onfocus(){
+ if(emailField.value == "your email")
+      emailField.value=="";
+ };
+ emailField.onblur=function((){
+  if(emailField.value=="")
+  emailField.value="your email";
+ }
+ 
+ setTimeout(someFunction,timeIntervalinmilliseconds);
+ clearTimeout(a varibale that contains value returnde by above function);//used to stop that
+ we get after specified time after page load that function will be called
+ fucntion changeImage{
+ myImageElement("src",imageArray[imageIndex]);
+ imageIndex++;
+ if(imageIndex>=imageArray.length)
+ imageIndex=0;
+ }//Afunctionto changeImage
+ setInterval(changeImage,5000);
+ this function calss the specified function(here changeImage) for every interval of five seconds
+ 
+ var intervalHandle = setInterval(changeImage,5000);
+ myImage.onclick=function(){
+ clearInerval(intervalHandle);
+ //to stop changing that imgae after we click
+ }
+ 
+ we have onchange,onkeypress events	
+ for checkboxes we have myCheckbox.checked returns true or false
+ suppose if we have a select field from a drop down list
+ 
+ mySelect.type gives select-one or select-multiple
+ when we select we have onchange event triggered mySelect.selectedIndex gives selected index
+ myselect.options[x].selected gives if we have multiple selections we have to have a loop
+ 
+ onsubmit is triggered when we press submit
+ 
+ document.getElemtentById("frmContact").onsubmit = function(){
+ if(document.getElementById("errorMessage").innerHtML="please provide info";
+  return false;
+ }
+ //returning false stops submitting
+ put true if info is provided
+ document.getElementById("tourselection").style.display="block";
+ or if you set to display = "none"; then that part willnot be displayed 
+ style is of css so we use style to apply css changes
+ myElemnt.style.color="red";
+ 
+ to apply to an entire class defined in css
+ myElement.className="someCSSclass";
+ 
+ //how to make some divs move on the page
+ function beginAnimate(){
+ document.getElementById("myelement").style.position="absolute";
+ document.getElementById("myelement").style.left=0px;
+ document.getElementById("myelement").style.top="100px";
+intervalHandle=setInterval(animateBox,50);
+ }
+ function animateBox(){
+ currentPos+=5;
+ document.getElementById("myelement").style.left=currentPos+"px";
+ }
+ if(currentPos>900){
+ clearInterval(intervalHandle);
+ ..just reset to have its usual css position;
+ document.getElementById("myelement").style.psoition="";
+ document.getElementById("myelement").style.left="";
+ document.getElementById("myelement").style.top="";
+ }
+ window.onload = function(){
+ setTimeout(beginAnimate,5000);
+ }
+ 
+ document.getElementsByClassName("myClass"); //recent addition to javaScriot
+ 
+//some old features
+document.write("Ican even include<strong>some tags also</strong>");
+remember this overwrites if it is executed after load use this onload not after some time
+
+//create regular expressions
+var myRE = /hello/;
+var myRE = new RegExp("hello");
+.var myString = "some text here";
+if(myRE.test(myString)){
+some code that has to be executed
+}here hello must be there in the string
+/^hello/; hello must be start
+/hello$/; //hello at the end
+/hello|goodbye/; we can have either hello or goodbye
+/he..p/; . is any character
+/\wello/; here\w must be an alpha numeric character
+/\bhello/;//\b must be a space or return
+/[crnld]ope/; only the letter in the braces must be there/;
+
+ ajax; asynchronous JacaScript and XML
+  create a request
+  deal with any response from the servor
+  var myRequest = new XMLHttpRequest();
+  //what to do when a response comes in
+  myRequest.onreadystatechange= function(){
+    //onreadystatechange is a event  
+  };//when respone comes this is called
+  
+  myRequest.open("GET","mysite.com".true);
+  myRequest.send(null);//this is sending a request
+  
+  isNaN(); //checks is not a number
+  we have also functions like Math.floor();
+  we also have toStriing();
+  windos.resize=function(){
+  function adjustStyle(){
+  //just check this in the videos this just to make it to another css when we resize
+  //just check this out i am not that interested right now
+  
+  
+  }
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 

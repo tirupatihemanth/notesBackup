@@ -1,0 +1,12 @@
+//These concepts are written from the vedios of the professor david j milan in //cs75 lectures which is making a dynamic website
+Domain Names are given by Registrars tlds are top level domains
+similarly godaddy is a good registrar and we also have a webhost is dreamhost
+DNS server is a computer that convert Domain Name into IP Address
+And you have to tell your registrar that whose name servers are going to convert your domain name into IP Address which points to Webhosts IP Address
+DirectAdmin is a gui which used to receive mails to your website or domain name and webhost
+nslookup domainname says the IP Address it is pointing to
+ftp file transfer protocol
+sftp secure file transfer protocol
+an attribute is something inside a tag and that modifies the behaviour
+Both value and types are compared using "triple equals to" in php
+ 
