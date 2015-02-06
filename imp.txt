@@ -1,0 +1,51 @@
+fscanf();
+fread();
+fprintf();
+fwrite
+fseek(fileptr, offset, fromwhere) i.e offset is in bytes and fromwhere is from where you would like to set the offset and fileptr is the file ptr considered
+feof returns a non zero value if the file pointer is at the end of the file
+rewind puts the file pointer to the beginning of the file 
+Read about the linked list question
+
+ps -u username gives the list of process run by the user
+ps -A gives list of process run by all the users
+ps just displays list of running processes
+came to know about the strchr function in c which is used to know the number of occurences of a character in a string It can also be used to find the number of tokens(say);
+
+
+
+
+
+$ df
+
+The command above will display the directory path of your various drives. Take note of the drive you wish to format.
+
+df-command-unixmenIn this tutorial, the name of the drive am going to format is Seth and its path under the filesystem is /dev/sdc1.
+
+3. Unmount drive using the syntax below:
+
+$ sudo umount /dev/sdc1
+
+umount4. Now run this command to format drive to fat32:
+
+$ sudo mkfs.vfat -n 'Ubuntu' -I /dev/sdc1
+
+mkfs.vfat-unixmen
+
+Understanding the above command
+
+mkfs
+
+mkfs is used to build a Linux filesystem on a device, usually a hard disk partition. The device argument is either the device name (e.g. /dev/hda1, /dev/sdb2), or a regular file that shall contain the filesystem. The size argument is the number of blocks to be used for the filesystem.
+
+vfat
+
+Formats the drive to FAT32, other formats available are mkfs.bfs, mkfs.ext2, mkfs.ext3, mkfs.ext4, mkfs.minix, mkfs.msdos, mkfs.vfat, mkfs.xfs, mkfs.xiafs etc.
+
+-n
+
+Volume-name sets the volume name (label) of the file system. The volume name can be up to 11 characters long. The default is no label. In this tutorial my volume-name is Ubuntu.
+
+-I
+
+It is typical for fixed disk devices to be partitioned so by default, you are not permitted to create a filesystem across the entire device.

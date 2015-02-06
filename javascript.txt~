@@ -1,0 +1,72 @@
+where do you put java script is important
+where ever browser finds it it runs it there itself
+<script src="myscript.js" type="text/javascript"></script> after running all the html thing in the body
+just put this script tag over there this is a good practice i.e just before the closing body tag
+style sheets are to be put in the top
+
+
+var variableName;
+if(){}   //conditional syntax
+
+=== strict equality check i.e same equality and type
+x=5;  and x="5"; are same for double equal and for === they are difficult
+== equality 
+just it's good to create functions before calling the functions
+
+create functions
+ function functionName (any arguments){
+  
+ }
+ 
+ we Have to call the functions necessary
+ functionName(any Arguments here);
+ you don't have to write  anywhere the return type or anything
+ 
+ var anArray=[];
+var multipllValues =  new Array();//you can give size as argument else just get a dynameic array
+is another way;
+ anArray[0]=1; ect.,
+ you can put in anytype of data
+ nameArray.length();
+ var revArray =nameArray.reverse();
+ .join();prints joined values by commas
+ we can use .sort();
+ var myArrayOfLinks = document.getElementByTagName("a"); // here we get an array
+ `var today = new Date(); //current date and time
+ today.getMonth();//returns 0 to 11 today.getFullYear();//today.getDate();//gives 1-31 day of month today.getDay();//gives 0 to 6 for day i.e sun to sat
+ var y2k = new Date(year,month,date,hours,minutes,seconds);//variable number of parametres
+ similar to getMethods we can use setMonth setDay setfullYear();
+ if(object1.equals(object)); getTime gives time in milliseconds since 1970
+ 
+ toCreate object easily
+ var objec1 ={name:"hello",score:"hello"}; //is sufficient
+ object1.name gives them out
+ 
+ 
+DOM - document object model
+document is our html code
+object is something on the document that makes some sense
+element node text node(is where text is written)
+ 
+classes and id's can be attributed to any elements but a group of elements can have a single class but id is unique for a particular element
+var myElement = document.getElementById("someId");
+var myLinks = document.getElementsByTagName("a");
+ myElement.nodetype  
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 

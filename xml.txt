@@ -1,0 +1,20 @@
+xml extensible markup language
+It was defined for exchanging information through internet
+Tags in xml describe content istead of formatting of the data(in case of html)
+xml 
+	-tagged elements
+	-attributes
+	-text(Are strings inside elements)
+A well formed xml must have single root element, matched tags and proper nesting, and unique attributes
+Schema is flexible in case of xml where as it is fixed in relational model of exchanging and storing data
+Also ordering is implied in case of xml by the structure you have made in xml document but relational is ordered
+we have simple query languages to query relational like mysql whereas xml we have a little tougher languages
+we display xml in browser by converting it to html using css or extensible styleshee language(XSL)
+A valid xml must adhere to well formed xml rules and also content specific specification
+Content Specific Specification languages are : document type descripters DTD, XML schema     
+In DTD we specify elements,attributes,nesting,ordering,#occurences Also special attribute types like ID IDREF
+IDREF AND IDREFS are used create pointers i.e they refer to corresponding ID in the xml document
+usually dtd's are specified before the xml document
+
+Similar to DTD WE HAVE XSD OR XML SCHEMA
+speciality is XSD ARE written in XML 
