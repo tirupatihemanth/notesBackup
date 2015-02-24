@@ -5,3 +5,46 @@ If you are not going to implement all the methods declared in Interface which su
 All methods in abstract classes are by default public and all variables are public static final (static because anyways you don't have any instantiation)
 Interface doen't declare constructors
 
+printWriter has better ui like it can be used similar to sysout
+BufferedWriter and BufferedReader are marked for their efficiency
+FileReader takes path or File and gets returns a FileReader which can wrapped around by a BufferedReader and hence buffered for efficiency or directly you can use a fileReader to read files
+
+Use of iterators over normal iteration i.e indexed iteration using normal for loop is there you use alist or llist.get(i) which is O(n) operation instead iterator.next() will proceed from there on having O(1) iteration over the linked list iterator is an interface implemented by a private class inside the linked list class which is instantiated and returned when call iterator() method over it
+
+Iterator interface doen't support add but one can easily implement custom iterators by implementing the interface iterator such as in linkedlist, arraylist etc., and adding one more custom function add() in listiterator
+
+Strings in java are immutable i.e once created they cannot be changed hence any class or any method of strings when returns always returns a new location of the modified string and the already present object is never changed
+
+getHashcode is the method in the original object class which returns as practically possible a different unique id or hash code for each object but you can always override that method but to get the original hashcode as defined by the Godclass is System.identityhashcode
+
+Read blog java method area doesn't require a garbage collector for  method area but it requires for heap space
+
+In computer science, string interning is a method of storing only one copy of each distinct string value, which must be immutable. Interning strings makes some string processing tasks more time- or space-efficient at the cost of requiring more time when the string is created or interned. The distinct values are stored in a string intern pool.
+
+Private Constructors are used when all methods necessary in it are static and can be directly accessed sucha classes are called utility classes and contains all necessary methods such as java.util.* such as java.util.Collections which has a private constructor ensuring non instantiability i.e we just need sorting and other most commonly used utility functions
+
+usually toString in object class is overwritten usually toString returns hashcode of the object
+    
+jvm provides garbage collector and used only for heap space even method area also comes under heap space but it doesn't provide garbage collector
+
+It's deliberately left unspecified i.e how hashcode is calculated
+
+Garbage collector often translate objects from one place to another as required
+
+
+67
+down vote
+accepted
+If you use the new keyword, a new String object will be created. Note that objects are always on the heap - the string pool is not a separate memory area that is separate from the heap.
+
+The string pool is like a cache. If you do this:
+
+String s = "abc";
+String p = "abc";
+as both are the same object in runtime constant pool they both have same hash code
+then the Java compiler is smart enough to make just one String object, and s and p will both be referring to that same String object. If you do this:
+
+String s = new String("abc");
+then there will be one String object in the pool, the one that represents the literal "abc", and there will be a separate String object, not in the pool, that contains a copy of the content of the pooled object. Since String is immutable in Java, you're not gaining anything by doing this; calling new String("literal") never makes sense in Java and is unnecessarily inefficient.
+
+Note that you can call intern() on a String object. This will put the String object in the pool if it is not already there, and return the reference to the pooled string. (If it was already in the pool, it just returns a reference to the object that was already there). See the API documentation for that method for more info.

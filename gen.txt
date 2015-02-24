@@ -1,0 +1,11 @@
+Abstract data type can be though of as an interface with specifications as specified by the problem which is implemented using appropriate data structure so that the required functions to be given by the abstract data type. Ex.: Priority Queue is an Abstract Data Type wheras it can be implemented with appropriate Data Structures, but it is most popularly implemented using heaps. Similarly Stack, Queue etc., are Abstract Data Types which are implemented using LinkedLists etc., An Abstract data type must support atleast the specified functions as specified which are later implemented using appropriate Data Structure and the Complexetiy of each operation depends upon the Data Structure you use and the way you perform the operation
+
+
+
+tex is the original or primitive typesetter(the way you set on type writer different fonts physical here digital) it provides few macros but latex provides lot more macros. 
+Lyx is not a document preparation system, LaTeX is. 
+To write LaTeX files, you can use any plain text editor: Notepad or Notepad++ under Windows or Nedit, Gedit, Emacs, Vim,.... under Linux. 
+The thing is, LaTeX as a system is quite different from typical WYSIWYG (What You See Is What You Get) editors like MS Word. You don't see the end result of how the document will look like as you type: you actually have to compile the code before you can see the end result. Although this approach has many advantages, some people find it tedious. 
+Lyx is a word processing program based on the LaTeX system. It attempts to strike a bargain between the LaTeX approach and the WYSIWYG approach. In other words, you can write LaTeX code into it and see the end result immediately as you type. 
+The problem with using Lyx (as opposed to a "pure" LaTeX approach) is that large files can quickly become unwieldy since your code has to be compiled "on the fly". It's much better to write all in plain text and compile it once. At least that's my opinion (to be honest, I've never tried Lyx for myself because I don't see the need for it
+to convert to pdf or other formats required binaries like pdflatex etc., are used to add several other primitives requierd by the pdf documents hence converting lated compiled to pdf

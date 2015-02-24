@@ -10,7 +10,7 @@
 
 The Array version:
 
-char a[] = "string";  
+char a[] = "string";
 Creates an array that is large enough to hold the string literal "string", including its NULL terminator. The array string is initialized with the string literal "string". The array can be modified at a later time. Also, the array's size is known even at compile time, so sizeof operator can be used to determine its size.
 
 The pointer version:

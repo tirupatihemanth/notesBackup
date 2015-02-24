@@ -23,3 +23,20 @@ The idea of counting all possible combination of n numbers by using numbers from
 understand the concept of faster I/O using getchar_unlockee() function which returns the next character in the input stream
 qsort function implements quick sort algorithm and the syntax is qsort(base address, no. of items, size of each item, comparefunction); compare function takes two parameters which are both void parameters and used for comparison if return value of compare function is > 0 then first argument is greater than b i.e you get an ascending order of the elements
 
+No. of inversions in an array is a measure of it's unsortedness. To find them naive is O(n^2) naive. Use divide and conquer i.e exactly similar to merge sort while merging you can count the inversions => O(nlogn) best possible.
+divide and Conquer algorithms are those where the given problem can be recursively applied over smaller sub problems and the smaller sub problems have nothing in common i.e each sub problem follows the same method but proceeds with different computation i.e there is no overlapping in smaller sub problems but whereas in dynamic programmin the given problem can be recursively applied over smaller sub problem but there some overlapping when you divide into sub problems which need not be computed again and again but can be reused just by solving once and reuse it when ever the computation is required again(called memoization). Basically when you are building up you mostly need not have to go down the recursion more than once at all since you already have the values from the previous evaluations.  Usually dynamic programming is used to find the optimal solutions shortest path where we can find optimal substructure i.e findin optimal solutions at the sub problems and extending it further must result in finding the optimal solution for the overall problem
+
+3 way partition can be done in O(n) whereas normal sorting will take up to O(nlogn) Better right? But limited to only max of three different elements in the array
+
+Dijkstra's doesn't give minimum spanning tree, shortest path problem is different from minimum spanning tree (MST) problem
+
+You are right that the two algorithms of Dijkstra (shortest paths from a single start node) and Prim (minimal weight spanning tree starting from a given node) have a very similar structure. They are both greedy (take the best edge from the present point of view) and build a tree spanning the graph.
+
+The value they minimize however is different. Dijkstra selects as next edge the one that leads out from the tree to a node not yet chosen closest to the starting node. (Then with this choice, distances are recalculated.) Prim choses as edge the shortest one leading out of the tree constructed so far. So, both algorithms chose a "minimal edge". The main difference is the value chosen to be minimal. For Dijkstra it is the length of the complete path from start node to the candidate node, for Prim it is just the weight of that single edge.
+
+To see the difference you should try to construct a few examples to see what happens, That is really instructive. The simplest example that shows different behaviour is a triangle x,y,z with edges {x,y} and {x,z} of length 2, while {y,z} has length 1. Starting in x Dijkstra will choose {x,y} and {x,z} (giving two paths of length 2) while Prim chooses {x,y} and {y,z} (giving spanning tree of weight 3).
+
+
+As for Kruskal, that is slightly different. It solves the minimal spanning tree, but during execution it chooses edge that may not form a tree, they just avoid cycles. So the partial solutions may be disconnected. In the end you get a tree.
+
+kruskal's connected weighted graph whereas prim's connected weighted undirected graph

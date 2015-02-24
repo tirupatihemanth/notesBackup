@@ -1,0 +1,33 @@
+In computer programming, a static variable is a variable that has been allocated statically—whose lifetime or "extent" extends across the entire run of the program. This is in contrast to the more ephemeral automatic variables (local variables are generally automatic), whose storage is allocated and deallocated on the call stack; and in contrast to objects whose storage is dynamically allocated in heap memory.
+
+When the program (executable or library) is loaded into memory, static variables are stored in the data segment of the program's address space (if initialized), or the BSS segment (if uninitialized), and are stored in corresponding sections of object files prior to loading.
+
+The static keyword is used in C and related languages both for static variables and other concepts.
+
+In computer programming, an automatic variable is a variable which is allocated and deallocated automatically when program flow enters and leaves the variable's context. This primarily applies to lexically-scoped variables, where the context is the lexical context, particularly the function or block in which a variable is defined. Note that inside a function call within a context, a variable moves out of scope (is inaccessible to the called function) but is not deallocated, coming back in scope when the function returns.
+
+The term local variable is usually synonymous with automatic variable, since these are the same thing in many programming languages, but local is more general – most local variables are automatic local variables, but static local variables also exist, notably in C. For a static local variable, the allocation is static (the lifetime is the entire program execution), not automatic, but it is only in scope during the execution of the function.
+
+Automatic variables may be allocated in the stack frame of the procedure in which they are declared; this has the useful effect of allowing recursion and re-entrancy. (For efficiency, the optimizer will try to allocate some of these variables in processor registers.)
+
+scope and extent of availability of a program thought a static variable scope may be limited to a method but it's extent is through out the execution of the program
+
+ An addressing mode specifies how to calculate the effective memory address of an operand by using information held in registers and/or constants contained within a machine instruction or elsewhere.
+
+ Stated simply: a variable is live if it holds a value that may be needed in the future.
+
+ In practice, however, system calls take time and can hurt the performance of a computing system, so it is not uncommon for system designers to allow some time-critical software (especially device drivers) to run with full kernel privileges. ----> I guess this is the reason for transfer various viruses through pendrives etc.,
+
+
+Instruction Register is different from instruction pointer
+Instruction pointer is nothing but the program counter which points to the next instruction to be executed
+Wheras Instruction Register(IR) stores the encoded version i.e not decoded version of instruction directly fetched from the memory when we fetch the instruction from the memory we increment the program counter
+
+When DI is used as an index, ES holds the default segment. When BP is used as an index, SS is the default segment. In all other cases, DS is the default segment. Note that not every register can be used as an index in real mode, for example, mov ax,[dx] is not valid in real mode.
+
+ES, FS, and GS are general-purpose auxiliary segment registers. SS holds the value of the stack segment.
+
+
+Direct memory access (DMA) is a feature of computerized systems that allows certain hardware subsystems to access main system memory independently of the central processing unit (CPU).
+
+
